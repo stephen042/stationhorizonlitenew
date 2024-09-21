@@ -1,6 +1,6 @@
 <?php
-// $connection = mysqli_connect('localhost', 'accurate_database', 'accurate_database', 'accurate_database');
-$connection = mysqli_connect('localhost', 'root', '', 'accurate_database', 3308);
+$connection = mysqli_connect('localhost', 'statscvu_stationhorizonlite', 'statscvu_stationhorizonlite', 'statscvu_stationhorizonlite');
+// $connection = mysqli_connect('localhost', 'root', '', 'accurate_database', 3308);
 if (!$connection) {
     die('error connecting to database');
 } else {
