@@ -76,7 +76,7 @@ if(isset($_SESSION['user_id'])){
         }
     }
 }else{
-    echo "<script>window.location.href = '../login'</script>";
+    echo "<script>window.location.href = '../public/login.php'</script>";
 }
 
 $currency = '$';

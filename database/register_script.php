@@ -61,8 +61,35 @@ if (isset($_POST['submit'])) {
         $smtp->execute();
         $date = date("Y-M-d-h-i-s");
 
+
+        // send mail
+        $to = "$email";
+        $subject = "Your Registration Verification";
+        $message = "
+                <div style='background: #E4E9F0'>
+                <center><img src='$website_url/app/images/$logo_img' width='100px;'></center>
+                <div style='font-family: sans-serif; padding: 10px; margin: 5px; background: white; margin: 5px 5%; border-radius: 10px;'>
+                <center><img src='$website_url/app/images/mail.png' width='100px'></center>
+                <p>Hi <b>$name</b></p>
+                <p>Welcome to $website_name</p>
+                <p>Your login information:</p>
+                <p>Login Email: $email</p>
+                <p>Login Password: $password</p>
+                <p>Thanks</p>
+                <p>Support Team, - $website_name</p>
+                <p><a href='$website_url' style='color: dodgerblue; text-decoration: none'>$website_url</a></p>
+                <a href='$website_url' style='color: dodgerblue; text-decoration: none'>
+                <p style='font-size: 13px'>Please consider all mails from us as confidential.</p><br>
+                </div><br>
+                </div>";
+
     
-        if ($email) {
+        
+                $headers = "MIME-Version: 1.0" . "\r\n";
+                $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+                $headers .= 'From: '.$website_name.'<'.$website_email.'>' . "\r\n";
+    
+        if (mail($to,$subject,$message,$headers)) {
             // send mail
             $to = "$admin_mail";
             $subject = "Hello Admin, somebody created an account {$date}";

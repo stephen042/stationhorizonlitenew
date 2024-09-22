@@ -416,7 +416,7 @@
         } else if (error.textContent == "success") {
             swal("SUCCESS!", "Your Registration was Successful.", "success");
             setTimeout(() => {
-                window.location.href = '../dashboard/index'
+                window.location.href = '../dashboard/index.php'
             }, 3000);
         } else if (error.textContent == "error") {
             swal("ERROR!", "Incorrect E-mail address or Password", "warning");
