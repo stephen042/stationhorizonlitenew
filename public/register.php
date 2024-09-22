@@ -23,7 +23,7 @@
             <div class="nk-block nk-block-middle nk-auth-body wide-xs">
 
 
-                <div class="brand-logo text-center mb-2 pb-4"><a class="logo-link" href="../"><img class="logo-img logo-light logo-img-lg" src='../images/<?php echo $logo_img ?>' alt="Coinrave"></a></div>
+                <div class="brand-logo text-center mb-2 pb-4"><a class="logo-link" href="../"><img class="logo-img logo-light logo-img-lg" src='../images/<?php echo $logo_img ?>' alt="stationhorizonlite"></a></div>
 
                 <div class="card card-bordered">
                     <div class="card-inner card-inner-lg">
@@ -414,9 +414,9 @@
         } else if (error.textContent == "exists") {
             swal("ERROR!", "Sorry Username/E-mail already Exists. Please Login now", "warning");
         } else if (error.textContent == "success") {
-            swal("SUCCESS!", "Your Registration was Successful. Please check your E-mail & verify your account info", "success");
+            swal("SUCCESS!", "Your Registration was Successful.", "success");
             setTimeout(() => {
-                window.location.href = 'verify'
+                window.location.href = '../dashboard/index'
             }, 3000);
         } else if (error.textContent == "error") {
             swal("ERROR!", "Incorrect E-mail address or Password", "warning");
