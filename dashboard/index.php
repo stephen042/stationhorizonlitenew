@@ -323,10 +323,6 @@ include "../includes/header.php";
             <p style="font-size: 15px; line-height: 20px; color: #6494AE;">Ask a question by using the live chat
                 button. Our support team will get back to you by email.</p>
         </article>
-
-        <article>
-            <a href="mailto:<?php echo $website_email ?>" style='color:dodgerblue'><button style="padding: 10px 15px; margin: 10px 0; color: dodgerblue; background: transparent; border: 2px solid dodgerblue; border-radius: 3px;">Get Support Now</button></a>
-        </article>
     </div>
 
 </div>
